@@ -20,20 +20,20 @@ public class Player {
         this.name = name;
     }
 
-    public Player getName(String name){
+    public String getName(String name){
         for(int i=0; i< players.size(); i++){
             if(players.get(i).equals(name)){
-                return new Player(players.get(i));
+                return players.get(i);
             }
         }
         return null;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        Player player = (Player) o;
-        return name.equals(player.name);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        Player player = (Player) o;
+//        return name.equals(player.name);
+//    }
 
 
 }
