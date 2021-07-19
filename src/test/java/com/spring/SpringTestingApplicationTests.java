@@ -1,5 +1,6 @@
 package com.spring;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -7,7 +8,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringTestingApplicationTests {
 
     @Test
-    void contextLoads() {
+    void namePlayerTest() {
+
+        Player player = new Player();
+        Assertions.assertEquals(player.getName("Trka"), null);
     }
 
 }
