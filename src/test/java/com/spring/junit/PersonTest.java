@@ -6,7 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.time.Duration;
+
 
 class PersonTest {
     private Person person;
@@ -48,6 +49,27 @@ class PersonTest {
         Assertions.assertThrows(RuntimeException.class, () -> person.getException());
     }
 
+    @Test
+    @DisplayName("TIme Out Test")
+    void timeOutTest(){
+        Assertions.assertTimeout(Duration.ofMillis(1000),
+                () -> {
+            Thread.sleep(2000);
+                    System.out.println("Time Out Test");
+                }
+                );
+    }
+
+    @Test
+    @DisplayName("TIme OutPreemptivly")
+    void timeoutPreemptivly(){
+        Assertions.assertTimeoutPreemptively(Duration.ofMillis(1000),
+                () -> {
+            Thread.sleep(2000);
+                    System.out.println("Time out Preemptivly");
+                }
+                );
+    }
 
 
 
