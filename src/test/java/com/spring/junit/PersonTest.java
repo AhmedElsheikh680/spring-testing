@@ -1,6 +1,7 @@
 package com.spring.junit;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
@@ -10,6 +11,7 @@ class PersonTest {
     private Person person;
 
     @Test
+    @Disabled
     void testing() {
         person = new Person();
 //        Assertions.assertAll("Person Data",
@@ -21,7 +23,7 @@ class PersonTest {
 
         Assertions.assertAll("Person Data" ,
                 () -> Assertions.assertAll("Person Names",
-                        () -> Assertions.assertEquals(person.getFirstName(), "Ahmed", "FirstName Not Matches"),
+                        () -> Assertions.assertEquals(person.getFirstName(), "Ahmedd", "FirstName Not Matches"),
                         () -> Assertions.assertEquals(person.getLastName(), "Elsheikh", "LastName Not matches")
                 ),
                 () -> Assertions.assertAll("Person Phones",
