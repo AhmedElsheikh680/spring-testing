@@ -41,4 +41,33 @@ public class Person {
     public void setPhone2(String phone2) {
         this.phone2 = phone2;
     }
+
+    public String findById(int id) {
+        if(id == 5){
+            return "Ahmed";
+        } else if(id == 6){
+            return "Elsheikh";
+        } else  {
+            return null;
+        }
+    }
+
+    public void getException() {
+        throw new SpecialException();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -2,6 +2,7 @@ package com.spring.junit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
@@ -32,5 +33,35 @@ class PersonTest {
                 )
                 );
     }
+
+    @Test
+    @DisplayName("Test Person By ID")
+    void findById() {
+        person = new Person();
+        Assertions.assertEquals(person.findById(1), null);
+    }
+
+    @Test
+    @DisplayName("Test Person By Exception")
+    void getExceptionTest(){
+        person = new Person();
+        Assertions.assertThrows(RuntimeException.class, () -> person.getException());
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
