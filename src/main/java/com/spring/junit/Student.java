@@ -3,7 +3,7 @@ package com.spring.junit;
 public class Student {
 
     private static String name = "Ahmed";
-    private static int age = 25;
+    private static String age = "25";
 
     public Student() {
     }
@@ -16,11 +16,11 @@ public class Student {
         Student.name = name;
     }
 
-    public  int getAge() {
+    public  String getAge() {
         return age;
     }
 
-    public  void setAge(int age) {
+    public  void setAge(String age) {
         Student.age = age;
     }
 }
