@@ -71,6 +71,12 @@ class PersonTest {
                 );
     }
 
+    @Test
+    @DisplayName("test assertEquals")
+    void newTest(){
+        //Assertions.assertTrue(1 == 1);
+        Assertions.assertTrue("Ahmed".equalsIgnoreCase("ahmed"));
+    }
 
 
 
