@@ -8,6 +8,7 @@ import org.junit.jupiter.api.*;
 //import static org.junit.jupiter.api.Assertions.*;
 import org.assertj.core.api.Assertions;
 
+@Tag("student")
 class StudentTest {
 
     private Student student;

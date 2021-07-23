@@ -1,14 +1,11 @@
 package com.spring.junit;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.util.Assert;
 
 import java.time.Duration;
 
-
+@Tag("person")
 class PersonTest {
     private Person person;
 
