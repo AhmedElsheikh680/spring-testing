@@ -5,8 +5,36 @@ import org.springframework.util.Assert;
 
 import java.time.Duration;
 
-@Tag("person")
-class PersonTest {
+
+class PersonTest implements PersonInterface {
+
+    @BeforeEach
+    void setUp(){
+        System.out.println("Before Each=================");
+    }
+
+    @Test
+    void simpleTest(){
+        System.out.println("Simple Test===================");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*
+
+
     private Person person;
 
     @Test
@@ -74,19 +102,4 @@ class PersonTest {
         //Assertions.assertTrue(1 == 1);
         Assertions.assertTrue("Ahmed".equalsIgnoreCase("ahmed"));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+ */
