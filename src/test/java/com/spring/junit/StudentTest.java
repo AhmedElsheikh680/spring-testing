@@ -11,6 +11,19 @@ import org.assertj.core.api.Assertions;
 @Tag("student")
 class StudentTest {
 
+    @Test
+    @DisplayName("HI Function")
+    @RepeatedTest(value = 5, name = "{displayName} : {currentRepetition} | {totalRepetitions}" )
+    void myTest(){
+        System.out.println("HI");
+    }
+
+
+
+}
+
+/*
+
     private Student student;
 
     @BeforeEach
@@ -43,7 +56,7 @@ class StudentTest {
     }
 
 
-}
+ */
 
 
 /*
