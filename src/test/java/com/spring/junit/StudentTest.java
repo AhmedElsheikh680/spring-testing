@@ -1,14 +1,36 @@
 package com.spring.junit;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.*;
-import org.springframework.util.Assert;
-
-import static org.junit.jupiter.api.Assertions.*;
+//import org.springframework.util.Assert;
+//
+//import static org.junit.jupiter.api.Assertions.*;
+import org.assertj.core.api.Assertions;
 
 class StudentTest {
 
     private Student student;
 
+    @BeforeEach
+    void setUp(){
+        student = new Student();
+    }
+
+
+
+    @Test
+    @DisplayName("Assertions")
+    void newTest(){
+        //Assertions.assertThat(student.getName()).isEqualTo("Ahmed");
+        MatcherAssert.assertThat(student.getName(), Matchers.is("Ahmed"));
+    }
+
+
+}
+
+
+/*
     @Test
     void testing(){
         student = new Student();
@@ -18,9 +40,7 @@ class StudentTest {
                 () -> Assertions.assertEquals(student.getAge(), "25" , "Age Not Matches")
         );
     }
-
-
-}
+ */
  /*
 
      @BeforeEach
