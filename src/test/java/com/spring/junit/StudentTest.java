@@ -16,6 +16,7 @@ class StudentTest {
     @BeforeEach
     void setUp(){
         student = new Student();
+        System.out.println("OUT");
     }
 
 
@@ -25,6 +26,20 @@ class StudentTest {
     void newTest(){
         //Assertions.assertThat(student.getName()).isEqualTo("Ahmed");
         MatcherAssert.assertThat(student.getName(), Matchers.is("Ahmed"));
+    }
+
+    @Nested
+    class nestedStudent {
+
+        @BeforeEach
+        void setUp(){
+            System.out.println("In");
+        }
+
+        @Test
+        void nestedTest(){
+            Assertions.assertThat(student.getName()).isEqualTo("Ahmed");
+        }
     }
 
 
