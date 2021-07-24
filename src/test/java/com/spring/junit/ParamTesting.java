@@ -69,4 +69,26 @@ public class ParamTesting {
                 Arguments.of("Mohamed", 63, "010")
         );
     }
+
+    @DisplayName("param test 6")
+    @ParameterizedTest(name = "{displayName}: {index} => {arguments}")
+    @ArgumentsSource(DataArguments.class)
+    void paramtest6(String name, int age, String phone){
+        System.out.println("Name: "+ name);
+        System.out.println("Age: "+ age);
+        System.out.println("Phone: "+ phone);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
