@@ -3,6 +3,7 @@ package com.spring.junit;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -32,10 +33,19 @@ public class ParamTesting {
             "Ali, 20, 011",
             "Samy, 45, 010"
     })
-    void paramTest(String name, int age, String phone){
+    void paramTest2(String name, int age, String phone){
         System.out.println("Name: "+ name);
         System.out.println("Age: "+ age);
         System.out.println("Phone: "+ phone);
 
+    }
+
+    @DisplayName("param Test 3")
+    @ParameterizedTest(name = "{displayName}: {index} => {arguments}")
+    @CsvFileSource(resources = "/myData.csv", numLinesToSkip = 1)
+    void paramTest3(String name, int age, String phone){
+        System.out.println("Name: "+ name);
+        System.out.println("Age: "+ age);
+        System.out.println("Phone: "+ phone);
     }
 }
